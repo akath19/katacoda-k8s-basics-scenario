@@ -10,15 +10,6 @@
         "text": "step1.md"
       }
     ],
-    "assets": {
-      "host01": [
-        {
-          "file": "validate.sh",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }
-      ]
-    },
     "intro": {
       "text": "intro.md"
     },
@@ -27,6 +18,13 @@
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Port 8080",
+        "port": 8080
+      }
+    ],
     "uilayout": "editor-terminal"
   },
   "backend": {

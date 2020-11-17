@@ -9,10 +9,14 @@ The development team needs you to create a new service that will reply an HTML p
 2. Make the application listen on port `8080` instead of port `5678`
 3. Make the application return the `Hello YP` string when called
 4. Expose container port `8080` on the deployment
-5. Expose the port to outside applications via a `Service` object
+5. Expose the port to outside applications via a `Service` object, the service must be named `http-echo`
 
 # Validation
-You can check your progress by running `/usr/local/bin/validate.sh`{{execute}} this script will output a single line that validates whether the scenario is correct or not
+Once you're ready to validate your progress, run the following command to port-forward the service so it can be checked via the integrated dashboard:
+
+`kubectl port-forward svc/http-echo --address 0.0.0.0 8080`{{execute}}
+
+If your application is running correctly you will see the string `Hello YP` in the integrated dashboard page
 
 # Hints
 1. The link to application documentation is [here](https://hub.docker.com/r/hashicorp/http-echo)
