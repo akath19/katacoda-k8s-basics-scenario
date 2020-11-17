@@ -1,0 +1,22 @@
+{
+  "title": "yp-challenges",
+  "description": "YellowPepper DevOps Challenges",
+  "icon": "fa-kubernetes",
+  "courses": [
+    {
+      "course_id": "create-new-service",
+      "title": "Create a New Service",
+      "description": "Create a New Service from Scratch"
+    },
+    {
+      "course_id": "diagnose-failing-service",
+      "title": "Diagnose a Failing Service",
+      "description": "Diagnose an Existing but Failing Service"
+    },
+    {
+      "course_id": "secure-configuration",
+      "title": "Secure Exposed Configuration",
+      "description": "Secure Exposed Configuration for an Existing Service"
+    }
+  ]
+}

@@ -18,7 +18,10 @@ Once you're ready to validate your progress, run the following command to port-f
 
 If your application is running correctly you will see the string `Hello YP` in the integrated dashboard page
 
+If not, hit `ctrl+c` to exit the command and keep working, you can run it as many times as you want (but not in parallel)
+
 # Hints
 1. The link to application documentation is [here](https://hub.docker.com/r/hashicorp/http-echo)
 2. In case you didn't notice, to make the application listen on port `8080` you need to add a command flag
 3. Same for the string `Hello YP`
+4. You should probably create a new file in the editor instead of doing everything via `kubectl`
