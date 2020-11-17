@@ -1,3 +1,6 @@
+# Before you Start
+Please run `launch.sh`{{execute}} to ensure the cluster is ready for the test
+
 # Description
 The development team needs you to create a new service that will reply an HTML page with any parameters you send to it, to do that you need to create a single YAML file that will do the following:
 
