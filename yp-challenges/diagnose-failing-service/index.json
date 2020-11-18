@@ -14,7 +14,7 @@
       "host01": [
         {
           "file": "definition.yaml",
-          "target": "/definition.yaml",
+          "target": "/root/definition.yaml",
           "chmod": "+w"
         }
       ]
