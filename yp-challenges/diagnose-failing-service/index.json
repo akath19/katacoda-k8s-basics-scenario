@@ -27,6 +27,13 @@
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Port 3000",
+        "port": 3000
+      }
+    ],
     "uilayout": "editor-terminal"
   },
   "backend": {
