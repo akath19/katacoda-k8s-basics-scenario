@@ -8,7 +8,8 @@ The DevOps lead saw the Grafana installation you made in the previous scenario a
 
 # Steps
 1. Use the YAML provided in the previous scenario (don't worry, the YAML in this scenario is already correct)
-2. Refactor the `Grafana` and `PostgreSQL` containers so that their environment variables are inside a secret
+2. Refactor the `Grafana` and `PostgreSQL` containers so that their environment variables are inside secrets
+3. Add the secrets to the same `definition.yaml` file
 
 # Validation
 Once you're ready to validate your progress, run the following command to port-forward the service so it can be checked via the integrated dashboard:
