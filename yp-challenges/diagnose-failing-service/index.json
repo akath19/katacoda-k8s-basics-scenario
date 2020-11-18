@@ -10,6 +10,15 @@
         "text": "step1.md"
       }
     ],
+    "assets": {
+      "host01": [
+        {
+          "file": "definition.yaml",
+          "target": "/definition.yaml",
+          "chmod": "+w"
+        }
+      ]
+    },
     "intro": {
       "text": "intro.md"
     },
