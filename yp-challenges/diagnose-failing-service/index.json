@@ -21,12 +21,10 @@
     },
     "intro": {
       "text": "intro.md"
-    },
-    "finish": {
-      "text": "finish.md"
     }
   },
   "environment": {
+    "hidefinish": true,
     "showdashboard": true,
     "dashboards": [
       {
