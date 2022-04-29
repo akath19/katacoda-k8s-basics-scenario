@@ -2,7 +2,6 @@
 Due to the constraints placed, there's only one solution
 
 ```
----
 apiVersion: v1
 kind: Secret
 metadata:
@@ -43,7 +42,6 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 3000
----
 ---
 apiVersion: v1
 kind: Secret
