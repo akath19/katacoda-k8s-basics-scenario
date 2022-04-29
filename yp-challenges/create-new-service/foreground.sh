@@ -1,2 +1,2 @@
 #!/bin/bash -e
-sh launch.sh
+launch.sh
