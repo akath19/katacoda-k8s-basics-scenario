@@ -1,6 +1,3 @@
-# Before you Start
-Please run `launch.sh`{{execute}} to ensure the cluster is ready for the test
-
 # Description
 The development team needs you to create a new service that will reply an HTML page with any parameters you send to it, to do that you need to create a single YAML file that will do the following:
 
@@ -14,13 +11,11 @@ The development team needs you to create a new service that will reply an HTML p
 # Validation
 Once you're ready to validate your progress, run the following command to port-forward the service so it can be checked via the integrated dashboard:
 
-`kubectl port-forward svc/http-echo --address 0.0.0.0 8080`{{execute}}
+`kubectl port-forward svc/http-echo --address 0.0.0.0 8080`
 
 If your application is running correctly you will see the string `Hello YP` in the integrated dashboard page
 
 If not, hit `ctrl+c` to exit the command and keep working, you can run it as many times as you want (but not in parallel)
-
-We have a script running behind the scenes that will validate if your solution works
 
 # Hints
 1. The link to application documentation is [here](https://hub.docker.com/r/hashicorp/http-echo)
