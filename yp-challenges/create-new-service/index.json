@@ -1,4 +1,5 @@
 {
+  "type": "challenge@0.8",
   "title": "Create a New Service",
   "description": "Create a New Service from Scratch",
   "difficulty": "Beginner",
@@ -7,15 +8,18 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"
+        "text": "step1.md",
+        "verify": "validation.sh"
       }
     ],
     "intro": {
       "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
     }
   },
   "environment": {
-    "hidefinish": true,
     "showdashboard": true,
     "dashboards": [
       {
