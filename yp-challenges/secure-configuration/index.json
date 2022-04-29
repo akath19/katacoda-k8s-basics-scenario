@@ -13,8 +13,8 @@
     "assets": {
       "host01": [
         {
-          "file": "definition.yaml",
-          "target": "./definition.yaml",
+          "file": "*",
+          "target": "/root",
           "chmod": "+w"
         }
       ]
@@ -32,9 +32,9 @@
         "port": 3000
       }
     ],
-    "uilayout": "editor-terminal"
+    "uilayout": "vscode-terminal-split"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }
