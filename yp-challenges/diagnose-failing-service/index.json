@@ -1,4 +1,5 @@
 {
+  "type": "challenge@0.8",
   "title": "Diagnose a Failing Service",
   "description": "Diagnose an Existing but Failing Service",
   "difficulty": "Intermediate",
@@ -7,7 +8,8 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"
+        "text": "step1.md",
+        "verify": "validation.sh"
       }
     ],
     "assets": {
@@ -20,11 +22,14 @@
       ]
     },
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "launch.sh"
+    },
+    "finish": {
+      "text": "finish.md"
     }
   },
   "environment": {
-    "hidefinish": true,
     "showdashboard": true,
     "dashboards": [
       {

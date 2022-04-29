@@ -22,3 +22,6 @@ If not, hit `ctrl+c` to exit the command and keep working, you can run it as man
 2. In case you didn't notice, to make the application listen on port `8080` you need to add a command flag
 3. Same for the string `Hello YP`
 4. You should probably create a new file in the editor instead of doing everything via `kubectl`
+
+# Warning
+Your solution must not change the nature of the application, any attempt to modify the original Docker image or application code will be considered a failure

@@ -1,0 +1,102 @@
+# Solution
+There's only one specific way to solve this:
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+spec:
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      containers:
+      - name: grafana
+        image: grafana/grafana:7.3.3
+        env:
+        - name: GF_DATABASE_TYPE
+          value: postgres
+        - name: GF_DATABASE_HOST
+          value: postgres:5432
+        - name: GF_DATABASE_USER
+          value: grafana
+        - name: GF_DATABASE_NAME
+          value: grafana
+        - name: GF_DATABASE_PASSWORD
+          value: super-secret-password
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:13.1-alpine
+        env:
+        - name: POSTGRES_PASSWORD
+          value: super-secret-password
+        - name: POSTGRES_DB
+          value: grafana
+        - name: POSTGRES_USER
+          value: grafana
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5432
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+spec:
+  selector:
+    app: postgres
+  ports:
+  - port: 5432
+    targetPort: 5432
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+spec:
+  selector:
+    app: grafana
+  ports:
+  - port: 3000
+    targetPort: 3000
+```
+# Errors
+The following typing errors exist in the original YAML:
+
+1. Port in `GF_DATABASE_HOST` is incorrect, should be `5432` instead of `54432`
+2. Database name in `GF_DATABASE_NAME` is incorrect, should be `grafana` instead of `grafna`
+3. Database password in `POSTGRES_PASSWORD` (or in `GF_DATABASE_PASSWORD`) is incorrect, should be the same value in both places

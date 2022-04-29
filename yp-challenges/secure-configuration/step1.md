@@ -5,11 +5,14 @@ Please run `launch.sh`{{execute}} to ensure the cluster is ready for the test
 The DevOps lead saw the Grafana installation you made in the previous scenario and said the following
 
 > That install's not gonna cut it, all those env variables should be kept in a secret so they're not available for everyone willy-nilly
+> Move the config to secrets named `grafana-secrets` & `postgres-secrets`
+> Be sure to use `envFrom` instead of mounting as volumes!
 
 # Steps
 1. Use the YAML provided in the previous scenario (don't worry, the YAML in this scenario is already correct)
 2. Refactor the `Grafana` and `PostgreSQL` containers so that their environment variables are inside secrets
-3. Add the secrets to the same `definition.yaml` file
+3. Secrets should be named `grafana-secrets` & `postgres-secrets`
+4. Add the secrets to the same `definition.yaml` file
 
 # Validation
 Once you're ready to validate your progress, run the following command to port-forward the service so it can be checked via the integrated dashboard:
