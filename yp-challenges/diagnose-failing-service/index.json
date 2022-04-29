@@ -13,8 +13,8 @@
     "assets": {
       "host01": [
         {
-          "file": "definition.yaml",
-          "target": "./definition.yaml",
+          "file": "*",
+          "target": "/root",
           "chmod": "+w"
         }
       ]
@@ -35,6 +35,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }
