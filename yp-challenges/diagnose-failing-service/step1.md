@@ -1,6 +1,3 @@
-# Before you Start
-Please run `launch.sh`{{execute}} to ensure the cluster is ready for the test
-
 # Description
 The development team needed a new instance of Grafana installed in the cluster, a senior member of the DevOps team installed it but it seems to be failing, here's the info the senior member gave you:
 
@@ -14,7 +11,7 @@ The development team needed a new instance of Grafana installed in the cluster, 
 # Validation
 Once you're ready to validate your progress, run the following command to port-forward the service so it can be checked via the integrated dashboard:
 
-`kubectl port-forward svc/grafana --address 0.0.0.0 3000`{{execute}}
+`kubectl port-forward svc/grafana --address 0.0.0.0 3000`
 
 If your application is running correctly you will see the Grafana login page
 
