@@ -16,7 +16,7 @@ spec:
         image: hashicorp/http-echo:0.2.3
         args:
         - -listen=:8080
-        - -text="Hello YP Test"
+        - -text="Hello YP"
         resources:
           limits:
             memory: "128Mi"
