@@ -3,6 +3,8 @@ The development team needed a new instance of Grafana installed in the cluster, 
 
 > Yeah, we installed a new version of Grafana, it uses a PostgreSQL instance in the same namespace, the YAML I used is named definition.yaml and it's included there, maybe start there?
 
+The link to Grafana documentation is [here](https://grafana.com/docs/grafana/latest/administration/configuration/), the link to PostgreSQL documentation is [here](https://hub.docker.com/_/postgres)
+
 # Steps
 1. Check the status of both pods (`Grafana` & `PostgreSQL`)
 2. Check the provided YAML for errors
@@ -16,10 +18,3 @@ Once you're ready to validate your progress, run the following command to port-f
 If your application is running correctly you will see the Grafana login page
 
 If not, hit `ctrl+c` to exit the command and keep working, you can run it as many times as you want (but not in parallel)
-
-# Hints
-1. The link to Grafana documentation is [here](https://grafana.com/docs/grafana/latest/administration/configuration/), the link to PostgreSQL documentation is [here](https://hub.docker.com/_/postgres)
-2. Check that all required variables are being setup
-3. Check logs for each application
-4. The `Grafana` container cannot use the root `PostgreSQL` user, if this is detected the scenario will be considered a failure
-5. The YAML may be correctly formatted but that doesn't mean everything's OK in it

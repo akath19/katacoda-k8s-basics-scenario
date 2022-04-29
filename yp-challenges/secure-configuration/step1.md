@@ -19,7 +19,3 @@ Once you're ready to validate your progress, run the following command to port-f
 If your application is running correctly you will see the Grafana login page
 
 If not, hit `ctrl+c` to exit the command and keep working, you can run it as many times as you want (but not in parallel)
-
-# Hints
-1. The documentation on Kubernetes Secrets is [here](https://kubernetes.io/docs/concepts/configuration/secret/)
-2. The documentation on how to mount environment variables is available [here](https://kubernetes.io/docs/concepts/configuration/secret/)

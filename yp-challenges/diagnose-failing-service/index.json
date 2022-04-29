@@ -9,7 +9,8 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "verify": "validation.sh"
+        "verify": "validation.sh",
+        "hint": "hint.sh"
       }
     ],
     "assets": {
